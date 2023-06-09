@@ -80,6 +80,17 @@ b)  Load the data for both years into R. Check the type of the count
     not numeric? Fix the problem in an appropriate manner, it is OK if
     some of the counts are inaccurate because of this. Explain your
     solution and the repercussions.
+```{r}
+names_2022 <- read.csv("data/open_data_portal_2022.csv")
+names_2021 <- read.csv("data/vornamen_2021.csv")
+
+typeof(names_2022$Anzahl)
+typeof(names_2021$Anzahl)
+
+names_2022$Anzahl <- as.numeric(gsub("oder weniger", "", names_2022$Anzahl))
+names_2021$Anzahl <- as.numeric(gsub("oder weniger", "", names_2021$Anzahl))
+```
+My solution is to delete the words "oder weniger" after the number 4 in each column to convert the variable "Anzahl" from a character variable to a numeric one. The repercussions are that now some of the values may be incorrect because if there where less than 4 Arinas for example the data will still show the value 4.
 
 c)  Calculate the total number of babies born in Munich in 2022
     and 2021. Which year had the bigger baby-boom?
