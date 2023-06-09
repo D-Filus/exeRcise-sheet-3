@@ -173,6 +173,10 @@ I just copied the whole exercise into chatgpt.
 b)  Using ChatGPT try to understand what the rapply() function does.
     Create an easy example with mock data where the function is used and
     explain it in your words.
+Prompts:
+What does the rapply() function do?
+Solution:
+In R, there are several apply functions such as apply(), lapply(), sapply(), and mapply(), but rapply() is not one of them.
 
 ## Final Note
 
