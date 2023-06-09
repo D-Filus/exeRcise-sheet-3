@@ -102,9 +102,18 @@ The year 2021 had the bigger baby-boom with 26620 babies compared to the year 20
 
 d)  Add a new column `year` to both datasets which holds the correct
     year for each.
+```{r}
+names_2022$year <- 2022
+names_2021$year <- 2021
+```
     
 
 e)  Combine both datasets into one using `bind_rows()`.
+```{r}
+library(dplyr)
+names_combined <- bind_rows(names_2022, names_2021)
+```
+
 
 f)  Combine the counts for same names to determine the most popular
     names across both years. Print out the top 10 names in a nicely
